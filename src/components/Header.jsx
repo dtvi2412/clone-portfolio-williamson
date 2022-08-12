@@ -8,14 +8,19 @@ import {
   FaPinterestP,
   TiSocialInstagram,
 } from '../assets/icons';
+import { useState } from 'react';
 
 const Header = () => {
+  const [isOpenNavbarMobile, setIsOpenNavbarMobile] = useState(false);
   return (
     <>
-      <header className="h-[100px] px-[15px] md:px-[45px] flex items-center justify-center md:justify-between">
+      <header className="h-[100px] lg:h-[178px] px-[15px] md:px-[45px] flex items-center justify-center md:justify-between">
         {/* start hambuger working mobile */}
-        <div className="lg:hidden">
-          <AiOutlineMenu className="absolute md:block left-[15px] cursor-pointer hover:text-green-400" />
+        <div
+          className="lg:hidden"
+          onClick={() => setIsOpenNavbarMobile((prev) => !prev)}
+        >
+          <AiOutlineMenu className="absolute md:block left-[15px] cursor-pointer hover:text-green-cyan" />
         </div>
         {/* end hambuger */}
         {/* start logo */}
@@ -35,31 +40,51 @@ const Header = () => {
           <nav className="hidden lg:block">
             <ul className="flex items-center justify-between gap-4">
               <li>
-                <a className="text-[13px] font-[500]" href="#home">
+                <a
+                  className="text-[13px] font-[500] hover:text-secondary relative"
+                  href="#home"
+                >
                   HOME
+                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2"></span>
                 </a>
               </li>
               <li>
-                <a className="text-[13px] font-[500]" href="#about-me">
+                <a
+                  className="text-[13px] font-[500] hover:text-secondary relative group "
+                  href="#about-me"
+                >
                   ABOUT
+                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
                 </a>
               </li>
 
               <li>
-                <a className="text-[13px] font-[500]" href="#services">
+                <a
+                  className="text-[13px] font-[500] hover:text-secondary relative group"
+                  href="#services"
+                >
                   SERVICES
+                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
                 </a>
               </li>
 
               <li>
-                <a className="text-[13px] font-[500]" href="#projects">
+                <a
+                  className="text-[13px] font-[500] hover:text-secondary relative group"
+                  href="#projects"
+                >
                   PROJECTS
+                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
                 </a>
               </li>
 
               <li>
-                <a className="text-[13px] font-[500]" href="#contact">
+                <a
+                  className="text-[13px] font-[500] hover:text-secondary relative group"
+                  href="#contact"
+                >
                   CONTACT
+                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
                 </a>
               </li>
             </ul>
@@ -70,13 +95,70 @@ const Header = () => {
 
         {/* start social */}
         <div className="hidden md:flex items-center gap-4">
-          <FaFacebookF className="text-[13px]" />
-          <AiOutlineTwitter className="text-[13px]" />
-          <FaPinterestP className="text-[13px]" />
-          <TiSocialInstagram className="text-[13px]" />
+          <FaFacebookF className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
+          <AiOutlineTwitter className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
+          <FaPinterestP className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
+          <TiSocialInstagram className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
         </div>
         {/* end social */}
       </header>
+      {/* start navbar tablet and mobile */}
+      <nav
+        className={`${
+          isOpenNavbarMobile
+            ? 'animate-open-nav h-auto'
+            : 'animate-close-nav h-0'
+        } px-[15px]  lg:hidden overflow-y-hidden`}
+      >
+        <ul>
+          <li>
+            <a
+              className="font-semibold block relative text-[14px] py-[10px]  text-green-cyan"
+              href="#home"
+            >
+              HOME
+              <span className="absolute left-0 bottom-0 right-0  h-[1px] bg-gray-200"></span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="font-semibold hover:text-green-cyan transition-all block relative text-[14px] py-[10px] "
+              href="#about-me"
+            >
+              ABOUT ME
+              <span className="absolute left-0 bottom-0 right-0  h-[1px] bg-gray-200"></span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="font-semibold hover:text-green-cyan transition-all block relative text-[14px] py-[10px] "
+              href="#services"
+            >
+              SERVICES
+              <span className="absolute left-0 bottom-0 right-0  h-[1px] bg-gray-200"></span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="font-semibold hover:text-green-cyan transition-all block relative text-[14px] py-[10px] "
+              href="#projects"
+            >
+              PROJECTS
+              <span className="absolute left-0 bottom-0 right-0  h-[1px] bg-gray-200"></span>
+            </a>
+          </li>
+          <li>
+            <a
+              className="font-semibold hover:text-green-cyan transition-all block text-[14px] py-[10px] "
+              href="#contact"
+            >
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* end navbar tablet and mobile */}
     </>
   );
 };
