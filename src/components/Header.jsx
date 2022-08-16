@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from '../assets/logo.png';
 
 import {
@@ -9,12 +9,37 @@ import {
   TiSocialInstagram,
 } from '../assets/icons';
 import { useState } from 'react';
+import { RESIZE_Y_DEFAULT, SCROLL_Y_DEFAULT } from '../constants';
 
 const Header = () => {
   const [isOpenNavbarMobile, setIsOpenNavbarMobile] = useState(false);
+  const [isFixedHeader, setIsFixedHeader] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= SCROLL_Y_DEFAULT) {
+        setIsFixedHeader(true);
+      } else {
+        setIsFixedHeader(false);
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.screen.width <= RESIZE_Y_DEFAULT) {
+        setIsFixedHeader(false);
+      }
+    });
+  }, []);
+
   return (
     <>
-      <header className="h-[100px] lg:h-[178px] px-[15px] md:px-[45px] flex items-center justify-center md:justify-between">
+      <header
+        className={`bg-white z-50  px-[15px] md:px-[45px] flex items-center justify-center md:justify-between ${
+          isFixedHeader
+            ? 'lg:animate-fixed-header lg:fixed lg:top-0 lg:left-0 lg:right-0 lg:h-[50px]'
+            : 'h-[100px] lg:h-[178px]'
+        }`}
+      >
         {/* start hambuger working mobile */}
         <div
           className="lg:hidden"
@@ -27,7 +52,9 @@ const Header = () => {
         <div className=" md:flex items-center justify-between gap-4">
           <a
             href="#home"
-            className="w-[74px] h-[100px] relative md:translate-x-1/2 lg:translate-x-0 lg:inline-block "
+            className={`${
+              isFixedHeader ? 'lg:w-[37px] lg:h-[50px]' : ''
+            } w-[74px] h-[100px] relative md:translate-x-1/2 lg:translate-x-0 lg:inline-block`}
           >
             <img
               className="w-full h-full object-cover cursor-pointer"

@@ -1,6 +1,6 @@
 import { FaFacebookF, FaPinterestP } from 'react-icons/fa';
 import { AiOutlineMenu, AiOutlineTwitter } from 'react-icons/ai';
-import { TiSocialInstagram } from 'react-icons/ti';
+import { TiSocialInstagram, TiArrowUpThick } from 'react-icons/ti';
 
 export {
   FaFacebookF,
@@ -8,4 +8,5 @@ export {
   AiOutlineTwitter,
   FaPinterestP,
   TiSocialInstagram,
+  TiArrowUpThick,
 };

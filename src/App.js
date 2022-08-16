@@ -1,10 +1,14 @@
 import './App.css';
-import { Header } from './components';
+import { Header, Projects, Footer, BackToTop } from './components';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Projects />
+
+      <BackToTop />
+      <Footer />
     </div>
   );
 }
