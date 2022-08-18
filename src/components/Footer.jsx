@@ -17,6 +17,11 @@ const Footer = () => {
             Github
           </a>
         </li>
+        <li>
+          <a className="hover:text-green-cyan duration-300" href="#youtube">
+            Youtube
+          </a>
+        </li>
       </ul>
     </footer>
   );

@@ -1,15 +1,23 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { Header, Projects, Footer, BackToTop } from './components';
+import { DefaultLayout } from './layouts';
+import { routes } from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Projects />
-
-      <BackToTop />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {routes.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              element={<DefaultLayout>{route.component}</DefaultLayout>}
+            />
+          ))}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

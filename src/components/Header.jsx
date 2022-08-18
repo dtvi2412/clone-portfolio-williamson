@@ -10,6 +10,7 @@ import {
 } from '../assets/icons';
 import { useState } from 'react';
 import { RESIZE_Y_DEFAULT, SCROLL_Y_DEFAULT } from '../constants';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpenNavbarMobile, setIsOpenNavbarMobile] = useState(false);
@@ -50,8 +51,8 @@ const Header = () => {
         {/* end hambuger */}
         {/* start logo */}
         <div className=" md:flex items-center justify-between gap-4">
-          <a
-            href="#home"
+          <Link
+            to="/"
             className={`${
               isFixedHeader ? 'lg:w-[37px] lg:h-[50px]' : ''
             } w-[74px] h-[100px] relative md:translate-x-1/2 lg:translate-x-0 lg:inline-block`}
@@ -61,19 +62,19 @@ const Header = () => {
               src={logo}
               alt="logo"
             />
-          </a>
+          </Link>
 
           {/* start navbar */}
           <nav className="hidden lg:block">
             <ul className="flex items-center justify-between gap-4">
               <li>
-                <a
+                <Link
                   className="text-[13px] font-[500] hover:text-secondary relative"
-                  href="#home"
+                  to="/"
                 >
                   HOME
                   <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2"></span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a

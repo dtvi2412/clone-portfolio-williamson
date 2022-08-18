@@ -10,6 +10,7 @@ module.exports = {
         primary: '#303030',
         secondary: '#ACACBE',
         'green-cyan': '#1abc9c',
+        'black-rgba': 'rgba(0, 0, 0, 0.7)',
       },
       keyframes: {
         'open-nav': {
