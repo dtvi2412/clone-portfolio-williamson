@@ -39,6 +39,7 @@ export const projects = [
     category: 'ReactJS, Tailwindcss',
     linkImg: nitendo,
     linkDemo: 'https://nitendo-clone.netlify.app',
+    description: 'Use reactjs and tailwindcss clone website nitendo.',
   },
   {
     id: 2,
@@ -46,6 +47,8 @@ export const projects = [
     category: 'ReactJS, NodeJS, Mongoose',
     linkImg: shirtmern,
     linkDemo: 'https://tshirtdev.netlify.app',
+    description:
+      'Build a website e-commerce with reactjs, express, and mongoose.',
   },
   {
     id: 3,
@@ -53,6 +56,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: shopbook,
     linkDemo: 'https://shop-bae1a.firebaseapp.com',
+    description: 'Build a website e-commerce with reactjs and firebase.',
   },
   {
     id: 4,
@@ -60,6 +64,7 @@ export const projects = [
     category: 'ReactJS, Firebase, SASS',
     linkImg: instagram,
     linkDemo: 'https://hosting-instagram-clone.firebaseapp.com',
+    description: 'Clone a website Instagram with reactjs, firebase, and sass.',
   },
   {
     id: 5,
@@ -67,6 +72,8 @@ export const projects = [
     category: 'ReactJS, Tailwindcss, Framer-motion',
     linkImg: basketballprofile,
     linkDemo: 'https://basketball-profile.web.app',
+    description:
+      'Build a website basketball profile with reactjs, and tailwindcss.',
   },
   {
     id: 6,
@@ -74,6 +81,7 @@ export const projects = [
     category: 'ReactJS, Material UI',
     linkImg: socialmui,
     linkDemo: 'https://social-mui.netlify.app',
+    description: 'Build a website UI social with reactjs, material UI.',
   },
   {
     id: 7,
@@ -81,6 +89,8 @@ export const projects = [
     category: 'ReactJS, Express, Mongoose',
     linkImg: mernlearn,
     linkDemo: 'https://angry-euler-1c98ac.netlify.app',
+    description:
+      'Use mongoose, express, reactjs, nodejs build a website note learning.',
   },
   {
     id: 8,
@@ -88,6 +98,7 @@ export const projects = [
     category: 'ReactJS, API',
     linkImg: movieapi,
     linkDemo: 'https://film-api-redux-2021.firebaseapp.com',
+    description: 'Build a website use reactjs, and api.',
   },
   {
     id: 9,
@@ -95,6 +106,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: shoesstore,
     linkDemo: 'https://shoes-dtv.firebaseapp.com',
+    description: 'Build a website shoes with reactjs and firebase.',
   },
   {
     id: 10,
@@ -102,6 +114,7 @@ export const projects = [
     category: 'ReactJS, API',
     linkImg: netflix,
     linkDemo: 'http://netflix-home.surge.sh',
+    description: 'Use reactjs, api, clone netflix page',
   },
   {
     id: 11,
@@ -109,6 +122,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: linefriends,
     linkDemo: 'https://line-friends-clone.web.app',
+    description: 'Clone a website Line Friends.',
   },
   {
     id: 12,
@@ -116,6 +130,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: wavelane,
     linkDemo: 'https://clone-wave-lane.firebaseapp.com',
+    description: 'Clone a website Wavelane.',
   },
   {
     id: 13,
@@ -123,6 +138,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: agency,
     linkDemo: 'https://agency-clone.web.app',
+    description: 'Clone a website Agency Legend.',
   },
   {
     id: 14,
@@ -130,6 +146,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: burro,
     linkDemo: 'https://clone-buro-harro-96139.firebaseapp.com',
+    description: 'Clone a website Buro Harro.',
   },
   {
     id: 15,
@@ -137,6 +154,7 @@ export const projects = [
     category: 'ReactJS',
     linkImg: cakeshop,
     linkDemo: 'http://clone-cakeshop.surge.sh',
+    description: 'Clone a website Cake Shop.',
   },
   {
     id: 16,
@@ -144,6 +162,7 @@ export const projects = [
     category: 'ReactJS, Styled-Components',
     linkImg: tesla,
     linkDemo: 'http://tesla-clone24.surge.sh',
+    description: 'Clone a website Tesla.',
   },
   {
     id: 17,
@@ -151,6 +170,7 @@ export const projects = [
     category: 'ReactJS, Styled-Components',
     linkImg: disney,
     linkDemo: 'http://clone-disneydtv.surge.sh',
+    description: 'Clone a website Disney.',
   },
   {
     id: 18,
@@ -158,6 +178,7 @@ export const projects = [
     category: 'ReactJS, Material UI',
     linkImg: youtubeclone,
     linkDemo: 'https://clone-ddb15.firebaseapp.com',
+    description: 'Clone a website Youtube.',
   },
   {
     id: 19,
@@ -165,6 +186,8 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: basketball,
     linkDemo: 'https://basketball-a3551.firebaseapp.com',
+    description:
+      'Build a website tutorial basketball video with reactjs, and firebase.',
   },
   {
     id: 20,
@@ -172,6 +195,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: imagedesign,
     linkDemo: 'https://clone-website-imagedesign98.web.app',
+    description: 'Clone a website Image Design.',
   },
   {
     id: 21,
@@ -179,6 +203,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: boomclub,
     linkDemo: 'https://clone-website-boom-club.firebaseapp.com',
+    description: 'Clone a website Boom Club.',
   },
   {
     id: 22,
@@ -186,6 +211,7 @@ export const projects = [
     category: 'ReactJS, Firebase',
     linkImg: coffehouse,
     linkDemo: 'https://clone-the-coffee-house.firebaseapp.com',
+    description: 'Clone a website The coffee house.',
   },
   {
     id: 23,
@@ -193,6 +219,8 @@ export const projects = [
     category: 'ReactJS, Styled Components',
     linkImg: portfoliotemplate,
     linkDemo: 'http://portfolio-template-dtv.surge.sh',
+    description:
+      'Clone a website portfolio with reactjs, and styled-components.',
   },
   {
     id: 24,
@@ -200,6 +228,7 @@ export const projects = [
     category: 'ReactJS, Firebase, Material UI',
     linkImg: tinder,
     linkDemo: 'https://tinder-app-a1cc2.firebaseapp.com',
+    description: 'Clone a website Tinder.',
   },
   {
     id: 25,
@@ -207,6 +236,8 @@ export const projects = [
     category: 'ReactJS, Material UI, AOS animation',
     linkImg: todolist,
     linkDemo: 'https://todo-dtv.firebaseapp.com',
+    description:
+      'Build a website Todolist with reactjs, material UI, and AOS animation.',
   },
   {
     id: 26,
@@ -214,6 +245,7 @@ export const projects = [
     category: 'ReactJS, SASS',
     linkImg: quiz,
     linkDemo: 'http://quiz-dtv.surge.sh',
+    description: 'Build a website Quiz',
   },
   {
     id: 27,
@@ -221,6 +253,7 @@ export const projects = [
     category: 'HTML5, CSS3, Javascript',
     linkImg: mercedes,
     linkDemo: 'http://sass-mercedes.surge.sh',
+    description: 'Clone a website Mercedes',
   },
   {
     id: 28,
@@ -228,6 +261,7 @@ export const projects = [
     category: 'ReactJS, Material UI',
     linkImg: tixcinema,
     linkDemo: 'http://tix-dtv.surge.sh',
+    description: 'Clone website Tix with reactjs, api, and material UI.',
   },
   {
     id: 29,
@@ -235,6 +269,7 @@ export const projects = [
     category: 'ReactJS, Material UI',
     linkImg: cinemadtv,
     linkDemo: 'https://cinema-dtv.firebaseapp.com',
+    description: 'Build a website Cinema with reactjs, api, and material UI.',
   },
   {
     id: 30,
@@ -242,6 +277,7 @@ export const projects = [
     category: 'HTML5, CSS3, Javascript',
     linkImg: homestead,
     linkDemo: 'http://home-stead.surge.sh',
+    description: 'Clone a website Home Stead.',
   },
   {
     id: 31,
@@ -249,6 +285,7 @@ export const projects = [
     category: 'HTML5, CSS3, Javascript',
     linkImg: housing,
     linkDemo: 'http://housing-dtv.surge.sh',
+    description: 'Clone a website Housing.',
   },
   {
     id: 32,
@@ -256,5 +293,6 @@ export const projects = [
     category: 'HTML5, CSS3, Javascript',
     linkImg: clothes,
     linkDemo: 'http://clothes-dtv.surge.sh',
+    description: 'Clone a website Clothes.',
   },
 ];

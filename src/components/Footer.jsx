@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="pt-8 py-24">
-      <ul className="flex items-center justify-center gap-8 text-[0.8rem] ">
+      <ul className="flex items-center justify-center gap-8 text-[0.7rem] sm:text-[0.8rem] ">
         <li>
           <a className="hover:text-green-cyan duration-300" href="#Facebook">
             Facebook
