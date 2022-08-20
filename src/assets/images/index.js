@@ -30,6 +30,7 @@ import cinemadtv from './cinemadtv.png';
 import homestead from './homstead.png';
 import housing from './housing.png';
 import clothes from './clothes.png';
+import aboutme from './about-me.jpg';
 
 export {
   nitendo,
@@ -64,4 +65,5 @@ export {
   homestead,
   housing,
   clothes,
+  aboutme,
 };

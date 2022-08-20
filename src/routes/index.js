@@ -1,4 +1,4 @@
-import { Home, Project } from '../pages';
+import { About, Home, Project } from '../pages';
 
 export const routes = [
   {
@@ -8,5 +8,9 @@ export const routes = [
   {
     path: '/projects/:name',
     component: <Project />,
+  },
+  {
+    path: '/about',
+    component: <About />,
   },
 ];

@@ -77,13 +77,13 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <a
+                <Link
+                  to="/about"
                   className="text-[13px] font-[500] hover:text-secondary relative group "
-                  href="#about-me"
                 >
                   ABOUT
                   <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
-                </a>
+                </Link>
               </li>
 
               <li>

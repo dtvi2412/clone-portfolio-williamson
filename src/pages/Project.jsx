@@ -13,7 +13,7 @@ const Project = () => {
   }, [name]);
 
   return (
-    <section className="px-[15px] lg:px-[45px] my-8">
+    <section>
       {/* start title project */}
       <div className="relative mb-16">
         <h1 className="font-bold uppercase">{project?.title}</h1>
