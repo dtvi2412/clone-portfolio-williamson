@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import logo from '../assets/logo.png';
+import { Link, useLocation } from 'react-router-dom';
 
+import logo from '../assets/logo.png';
 import {
   FaFacebookF,
   AiOutlineMenu,
@@ -10,11 +11,13 @@ import {
 } from '../assets/icons';
 import { useState } from 'react';
 import { RESIZE_Y_DEFAULT, SCROLL_Y_DEFAULT } from '../constants';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpenNavbarMobile, setIsOpenNavbarMobile] = useState(false);
   const [isFixedHeader, setIsFixedHeader] = useState(false);
+
+  const { pathname } = useLocation();
+  const locationCurrent = pathname.split('/')[1];
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -69,11 +72,16 @@ const Header = () => {
             <ul className="flex items-center justify-between gap-4">
               <li>
                 <Link
-                  className="text-[13px] font-[500] hover:text-secondary relative"
+                  className="text-[13px] font-[500] hover:text-secondary relative group"
                   to="/"
                 >
                   HOME
-                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2"></span>
+                  {locationCurrent === '' && (
+                    <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2"></span>
+                  )}
+                  {locationCurrent !== '' && (
+                    <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
+                  )}
                 </Link>
               </li>
               <li>
@@ -82,7 +90,12 @@ const Header = () => {
                   className="text-[13px] font-[500] hover:text-secondary relative group "
                 >
                   ABOUT
-                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
+                  {locationCurrent === 'about' && (
+                    <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2"></span>
+                  )}
+                  {locationCurrent !== 'about' && (
+                    <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
+                  )}
                 </Link>
               </li>
 
@@ -97,23 +110,33 @@ const Header = () => {
               </li>
 
               <li>
-                <a
+                <Link
                   className="text-[13px] font-[500] hover:text-secondary relative group"
-                  href="#projects"
+                  to="/projects"
                 >
                   PROJECTS
-                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
-                </a>
+                  {locationCurrent === 'projects' && (
+                    <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2"></span>
+                  )}
+                  {locationCurrent !== 'projects' && (
+                    <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
+                  )}
+                </Link>
               </li>
 
               <li>
-                <a
+                <Link
                   className="text-[13px] font-[500] hover:text-secondary relative group"
-                  href="#contact"
+                  to="/contact"
                 >
                   CONTACT
-                  <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
-                </a>
+                  {locationCurrent === 'contact' && (
+                    <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2"></span>
+                  )}
+                  {locationCurrent !== 'contact' && (
+                    <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
+                  )}
+                </Link>
               </li>
             </ul>
           </nav>
@@ -140,22 +163,22 @@ const Header = () => {
       >
         <ul>
           <li>
-            <a
+            <Link
               className="font-semibold block relative text-[14px] py-[10px]  text-green-cyan"
-              href="#home"
+              to="/"
             >
               HOME
               <span className="absolute left-0 bottom-0 right-0  h-[1px] bg-gray-200"></span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="font-semibold hover:text-green-cyan transition-all block relative text-[14px] py-[10px] "
-              href="#about-me"
+              to="/about"
             >
               ABOUT ME
               <span className="absolute left-0 bottom-0 right-0  h-[1px] bg-gray-200"></span>
-            </a>
+            </Link>
           </li>
           <li>
             <a

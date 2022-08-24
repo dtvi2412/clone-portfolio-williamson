@@ -1,8 +1,12 @@
-import { About, Home, Project } from '../pages';
+import { About, Contact, Home, Project } from '../pages';
 
 export const routes = [
   {
     path: '/',
+    component: <Home />,
+  },
+  {
+    path: '/projects',
     component: <Home />,
   },
   {
@@ -12,5 +16,9 @@ export const routes = [
   {
     path: '/about',
     component: <About />,
+  },
+  {
+    path: '/contact',
+    component: <Contact />,
   },
 ];
