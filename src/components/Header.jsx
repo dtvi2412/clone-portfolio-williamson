@@ -1,16 +1,11 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import logo from '../assets/logo.png';
-import {
-  FaFacebookF,
-  AiOutlineMenu,
-  AiOutlineTwitter,
-  FaPinterestP,
-  TiSocialInstagram,
-} from '../assets/icons';
+import { AiOutlineMenu } from '../assets/icons';
+import { logotv } from '../assets/images';
 import { useState } from 'react';
 import { RESIZE_Y_DEFAULT, SCROLL_Y_DEFAULT } from '../constants';
+import SocialPersonal from './SocialPersonal';
 
 const Header = () => {
   const [isOpenNavbarMobile, setIsOpenNavbarMobile] = useState(false);
@@ -56,14 +51,15 @@ const Header = () => {
         <div className=" md:flex items-center justify-between gap-4">
           <Link
             to="/"
-            className={`${
-              isFixedHeader ? 'lg:w-[37px] lg:h-[50px]' : ''
-            } w-[74px] h-[100px] relative md:translate-x-1/2 lg:translate-x-0 lg:inline-block`}
+            className={`relative md:translate-x-1/2 lg:translate-x-0 lg:inline-block`}
           >
+            {/* w-[74px] h-[100px] */}
             <img
-              className="w-full h-full object-cover cursor-pointer"
-              src={logo}
-              alt="logo"
+              className={`${
+                isFixedHeader ? 'lg:w-[37px] lg:h-[37px]' : ''
+              }  w-[54px] h-[54px] object-cover cursor-pointer`}
+              src={logotv}
+              alt="logotv"
             />
           </Link>
 
@@ -145,12 +141,7 @@ const Header = () => {
         {/* end logo */}
 
         {/* start social */}
-        <div className="hidden md:flex items-center gap-4">
-          <FaFacebookF className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
-          <AiOutlineTwitter className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
-          <FaPinterestP className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
-          <TiSocialInstagram className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
-        </div>
+        <SocialPersonal />
         {/* end social */}
       </header>
       {/* start navbar tablet and mobile */}
@@ -164,6 +155,7 @@ const Header = () => {
         <ul>
           <li>
             <Link
+              onClick={() => setIsOpenNavbarMobile(false)}
               className="font-semibold block relative text-[14px] py-[10px]  text-green-cyan"
               to="/"
             >
@@ -173,6 +165,7 @@ const Header = () => {
           </li>
           <li>
             <Link
+              onClick={() => setIsOpenNavbarMobile(false)}
               className="font-semibold hover:text-green-cyan transition-all block relative text-[14px] py-[10px] "
               to="/about"
             >
@@ -182,6 +175,7 @@ const Header = () => {
           </li>
           <li>
             <a
+              onClick={() => setIsOpenNavbarMobile(false)}
               className="font-semibold hover:text-green-cyan transition-all block relative text-[14px] py-[10px] "
               href="#services"
             >
@@ -190,21 +184,24 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a
+            <Link
+              to="/projects"
+              onClick={() => setIsOpenNavbarMobile(false)}
               className="font-semibold hover:text-green-cyan transition-all block relative text-[14px] py-[10px] "
-              href="#projects"
             >
               PROJECTS
               <span className="absolute left-0 bottom-0 right-0  h-[1px] bg-gray-200"></span>
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
+              to="/contact"
+              onClick={() => setIsOpenNavbarMobile(false)}
               className="font-semibold hover:text-green-cyan transition-all block text-[14px] py-[10px] "
               href="#contact"
             >
               CONTACT
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

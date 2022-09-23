@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  FaFacebookF,
-  AiOutlineTwitter,
-  FaPinterestP,
-  TiSocialInstagram,
-} from '../assets/icons';
+
 import { aboutme } from '../assets/images';
+import { SocialPersonal } from '../components';
 const About = () => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2  gap-20 place-items-center">
@@ -25,12 +21,7 @@ const About = () => {
           </p>
         </div>
         {/* start social */}
-        <div className="hidden md:flex items-center gap-4">
-          <FaFacebookF className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
-          <AiOutlineTwitter className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
-          <FaPinterestP className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
-          <TiSocialInstagram className="text-[14px] hover:text-green-cyan cursor-pointer transition-all" />
-        </div>
+        <SocialPersonal />
         {/* end social */}
       </div>
       {/* end left */}

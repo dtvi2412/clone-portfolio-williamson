@@ -31,6 +31,7 @@ import homestead from './homstead.png';
 import housing from './housing.png';
 import clothes from './clothes.png';
 import aboutme from './about-me.jpg';
+import logotv from './logotv.png';
 
 export {
   nitendo,
@@ -66,4 +67,5 @@ export {
   housing,
   clothes,
   aboutme,
+  logotv,
 };
