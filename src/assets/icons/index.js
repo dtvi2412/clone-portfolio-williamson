@@ -5,6 +5,7 @@ import {
   AiOutlineClose,
   AiFillYoutube,
   AiFillGithub,
+  AiOutlineRollback,
 } from 'react-icons/ai';
 import { TiSocialInstagram, TiArrowUpThick } from 'react-icons/ti';
 
@@ -18,4 +19,5 @@ export {
   AiOutlineClose,
   AiFillYoutube,
   AiFillGithub,
+  AiOutlineRollback,
 };

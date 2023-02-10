@@ -18,7 +18,7 @@ const ZoomProject = ({ linkImg, onCloseZoom }) => {
             alt="zoom-img"
           />
           <div
-            className="absolute right-2 -bottom-8 text-white"
+            className="absolute right-2 -bottom-8 text-white cursor-pointer"
             onClick={onCloseZoom}
           >
             <AiOutlineClose className="text-[18px] text-white" />

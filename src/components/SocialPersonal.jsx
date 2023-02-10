@@ -14,7 +14,7 @@ const data = [
   {
     id: 1,
     icon: <AiFillGithub />,
-    link: 'https://www.facebook.com/profile.php?id=100007255540779',
+    link: 'https://github.com/dtvi2412',
   },
   {
     id: 2,

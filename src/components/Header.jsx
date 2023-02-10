@@ -95,7 +95,7 @@ const Header = () => {
                 </Link>
               </li>
 
-              <li>
+              {/* <li>
                 <a
                   className="text-[13px] font-[500] hover:text-secondary relative group"
                   href="#services"
@@ -103,7 +103,7 @@ const Header = () => {
                   SERVICES
                   <span className="h-[1px] w-[9px] bg-primary absolute left-0 -bottom-1/2 hidden group-hover:block"></span>
                 </a>
-              </li>
+              </li> */}
 
               <li>
                 <Link

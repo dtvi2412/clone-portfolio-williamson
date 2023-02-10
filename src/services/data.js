@@ -32,6 +32,20 @@ import {
   housing,
   clothes,
 } from '../assets/images';
+
+import {
+  girlcotrang,
+  girlkatana,
+  girlkungfu,
+  girljungho,
+  girlportrait,
+  girlmoutain,
+  mom,
+  rambotulso,
+  imshot,
+  rm,
+} from '../assets/imgs-art';
+
 export const projects = [
   {
     id: 1,
@@ -294,5 +308,50 @@ export const projects = [
     linkImg: clothes,
     linkDemo: 'http://clothes-dtv.surge.sh',
     description: 'Clone a website Clothes.',
+  },
+];
+
+export const arts = [
+  {
+    id: 1,
+    linkImg: girlcotrang,
+  },
+  {
+    id: 2,
+    linkImg: girlkatana,
+  },
+  {
+    id: 3,
+    linkImg: imshot,
+  },
+
+  {
+    id: 4,
+    linkImg: girljungho,
+  },
+  {
+    id: 5,
+    linkImg: girlportrait,
+  },
+  {
+    id: 6,
+    linkImg: girlmoutain,
+  },
+  {
+    id: 7,
+    linkImg: mom,
+  },
+  {
+    id: 8,
+    linkImg: girlkungfu,
+  },
+  {
+    id: 9,
+    linkImg: rambotulso,
+  },
+
+  {
+    id: 10,
+    linkImg: rm,
   },
 ];

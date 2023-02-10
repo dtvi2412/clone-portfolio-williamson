@@ -17,7 +17,8 @@ const About = () => {
             My name is Vi, after graduating from Cao Đẳng Kỹ Thuật Cao Thắng
             college, I got interested in Front-End web programming. So I learned
             more knowledge at Cybersoft Academy and F8 Fullstack and trained at
-            home.
+            home. In addition, I also love to draw, especially in digital
+            painting
           </p>
         </div>
         {/* start social */}

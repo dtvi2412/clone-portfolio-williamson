@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
+import { AiOutlineRollback } from '../assets/icons';
 import { projects } from '../services/data';
 const Project = () => {
   const { name } = useParams();
+  const navigate = useNavigate();
   const [project, setProject] = useState({});
 
   useEffect(() => {
@@ -14,6 +16,13 @@ const Project = () => {
 
   return (
     <section>
+      <span
+        className="flex items-center gap-2 text-sm  w-[100px] py-2 cursor-pointer rounded-sm"
+        onClick={() => navigate(-1)}
+      >
+        Back
+        <AiOutlineRollback />
+      </span>
       {/* start title project */}
       <div className="relative mb-16">
         <h1 className="font-bold uppercase">{project?.title}</h1>
